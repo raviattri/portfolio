@@ -5,16 +5,14 @@ if(isset($_POST['submit']))
 {
     
 
- $date=$_POST['date'];
- $number=$_POST['number'];
  $name=$_POST['name'];
- $phone=$_POST['mobile'];
  $email=$_POST['email'];
- $msg=$_POST['desc'];
+ $phone=$_POST['sub'];
+ $msg=$_POST['msg'];
 
 
  
- $to = "ul@webseekers.in,annexetourandtravels@gmail.com,sales@requisitetech.com";
+ $to = "raraviattri@gmail.com";
     $subject = "Tour Package Enquiry Details";
 
     $message = "
@@ -28,32 +26,22 @@ if(isset($_POST['submit']))
               <tbody>
               
               <tr>
-                <td>Date</td>
-                <td>$date</td>
-              </tr>
-
-              <tr>
-                <td>Number</td>
-                <td>$number</td>
-              </tr>
-
-              <tr>
                 <td>Name</td>
                 <td>$name</td>
               </tr>
-
-              <tr>
-              <td>Mobile</td>
-              <td>$phone</td>
-             </tr> 
 
                <tr>
                 <td>Email</td>
                 <td>$email</td>
               </tr>
+
+              <tr>
+              <td>Subject</td>
+              <td>$subject</td>
+             </tr> 
              
               <tr>
-                <td>Description</td>
+                <td>Message</td>
                 <td>$msg</td>
               </tr> 
            
@@ -72,7 +60,7 @@ if(isset($_POST['submit']))
                 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                 
                 // More headers
-                $headers .= 'From: <annexetourandtravels@gmail.com>' . "\r\n";
+                $headers .= 'From: <raraviattri@gmail.com>' . "\r\n";
              //   $headers .= 'Cc: myboss@example.com' . "\r\n";
                 
                 mail($to,$subject,$message,$headers);
@@ -91,8 +79,6 @@ if(isset($_POST['submit1']))
 {
     
 
-  $date=$_POST['date'];
-  $number=$_POST['number'];
   $name=$_POST['name'];
   $phone=$_POST['mobile'];
   $email=$_POST['email'];
@@ -100,7 +86,7 @@ if(isset($_POST['submit1']))
 
 
  
- $to = "ul@webseekers.in,annexetourandtravels@gmail.com,sales@requisitetech.com";
+ $to = "raraviattri@gmail.com";
     $subject = "Tour Package Get in Touch Details";
 
     $message = "
@@ -158,7 +144,7 @@ if(isset($_POST['submit1']))
                 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                 
                 // More headers
-                $headers .= 'From: <annexetourandtravels@gmail.com>' . "\r\n";
+                $headers .= 'From: <raraviattri@gmail.com>' . "\r\n";
              //   $headers .= 'Cc: myboss@example.com' . "\r\n";
                 
                 mail($to,$subject,$message,$headers);

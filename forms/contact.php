@@ -1,41 +1,50 @@
-<?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+<div class="container tpmgn">
+                <div class="row">
+                    <h1 class="banerbotm">Contact</h1>
+                    
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="getin">
+                        <form  method="post" action="submit.php" enctype="multipart/form-data" class="wpcf7-form init">
+                            
+                          <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" name="name" class="form-control" required>
+                            </div>
+                          </div>
+                          
+                                             
+                          <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">E-mail</label>
+                            <div class="col-sm-10">
+                              <input type="email" name="email"class="form-control"  required>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Subject</label>
+                            <div class="col-sm-10">     
+                            <input type="text" name="sub" class="form-control"  required>
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'raraviattri@gmail.com';
+                            </div>
+                          </div>
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+                          <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Message</label>
+                            <div class="col-sm-10">     
+                            <input type="text" name="msg" class="form-control"  required>
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+                            </div>
+                          </div>
+                          
+                          <input type="submit" name="submit2" value="Submit" class="form-control">
+                          
+                        </form>
+                        
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
-?>
+                </div>
+            </div>
